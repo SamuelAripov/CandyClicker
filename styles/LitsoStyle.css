@@ -43,13 +43,29 @@ a {
    user-select: none;
 }
 /* animation */
-.animations {
+.fallingPepperMintsAnim {
   animation-name: upDownAnimation;
   animation-duration: 10s;
 }
 @keyframes upDownAnimation {
   from {top: -400px}
   to {top: 600px; display: none;}
+}
+.sideNavAnim {
+  animation-name: animForSideNav;
+  animation-duration: 3s;
+}
+@keyframes animForSideNav {
+  from {width: 0px}
+  to {width: 350px}
+}
+.actions__containerAnim {
+  animation-name: unfoldActionsContainerAnim;
+  animation-duration: 2s;
+}
+@keyframes unfoldActionsContainerAnim {
+  from {min-height: 0rem}
+  to {min-height: 1rem}
 }
 /* Container */
 
@@ -91,6 +107,7 @@ a {
   transition: 0.5s;
   padding-top: 0px;
 }
+
 /* Actions Bar */
 .images {
   height: 800px;
@@ -108,9 +125,9 @@ a {
 .actions__container {
   align-items: center;
   display: flex;
-  max-width: 40rem;
+  max-width: 43rem;
   margin: 0 auto;
-  min-height: 3rem;
+  min-height: 1rem;
   padding: 0 1.6rem;
 }
 

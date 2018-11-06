@@ -1,6 +1,5 @@
 import {
     animations,
-    pepperMintFactory,
     powerUps,
 } from "./index-functions"
 
@@ -15,9 +14,9 @@ let refreshCookieCount = () => {
 document.querySelector('#cookie').addEventListener("click", (e) => {
     animations()
     numOfCookies += cookiesPerClick
-    document.querySelector('#cookie').style.width = "295px"
-    document.querySelector('#cookie').style.height = "395px"
-    document.querySelector('#cookie').style.filter = "brightness(90%)"
+    document.querySelector('#cookie').style.width = "290px"
+    document.querySelector('#cookie').style.height = "390px"
+    document.querySelector('#cookie').style.filter = "brightness(85%)"
     setTimeout(() => {
         document.querySelector('#cookie').style.width = "300px"
         document.querySelector('#cookie').style.height = "400px"
@@ -32,15 +31,7 @@ document.querySelector('#button0').addEventListener("click", (e) => {
         refreshCookieCount()
     }
 })
-setInterval(powerUps(), 100);
+setInterval(powerUps(), refreshCookieCount(), 100);
 
 document.documentElement.style.overflow = 'hidden'
 document.body.scroll = "no"
-
-export {
-    numOfCookies,
-    refreshCookieCount
-}
-
-
-
